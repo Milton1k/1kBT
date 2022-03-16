@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    font-family: 'Franklin Gothic Medium';
+}
+
+nav{
+    background-color: whitesmoke;
+    height: 60px;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 10px 50px;
+}
+
+.logo{
+    height: 40px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0px 5px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 12px;
+    padding: 7px 7px;
+}
+
+li a:hover{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.checkbtn{
+    font-size: 18px;
+    color: black;
+    float:right;
+    line-height: 60px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.fondo{
+    display: grid;
+    align-items: center;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.imagenes1{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.fondo .wab{
+    font-size: 2rem;
+    justify-self: center;
+    color: whitesmoke;
+}
+
+.fondo img{
+    margin: 10;
+    padding: 1rem;
+    flex-wrap: nowrap;
+    width: 80%;
+    justify-self: center;
+}
+
+#main__footer{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1,2;
+    padding: 1.5rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#contacto__redes{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+
+#contacto__w{
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    padding-bottom: 1rem;
+}
+
+#redes a{
+    text-decoration: none;
+    justify-self: center;
+    padding: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+@media (max-width: 600px){
+    .enlace{
+        padding-left: 10px;
+    }
+    nav ul li a{
+        font-size: 9px;
+        padding: 7px 2px;
+    }
+}
+
+@media (max-width: 435px ){
+    .checkbtn{
+        display: block;
+        
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 45vh;
+        background:whitesmoke;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .4s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 5px 2px;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+        color: whitesmoke;
+    }
+
+    li a:hover{
+        background: whitesmoke;
+        color: black;
+    }
+
+    #check:checked ~ ul{
+        left:0;
+    }
+
+}  
